@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div style="height:20px;"></div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Nmae</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Department</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Gender</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let emp of employees">
+          <tr>
+            <th scope="row">{{emp.id}}</th>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.department}}</td>
+            <td>{{emp.dob}}</td>
+            <td>{{emp.gender}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <a routerLink="/createEmployee">Add Employee</a>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
